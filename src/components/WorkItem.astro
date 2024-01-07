@@ -1,0 +1,38 @@
+---
+const { imageFileName, companyName, role, from, until } = Astro.props;
+---
+
+<li class="flex gap-4">
+  <div
+    class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0"
+  >
+    <img
+      alt=""
+      loading="lazy"
+      width="32"
+      height="32"
+      decoding="async"
+      data-nimg="1"
+      class="h-8 w-8 rounded-full"
+      src=`/img/${imageFileName}`
+      style="color: transparent;"
+    />
+  </div>
+  <dl class="flex flex-auto flex-wrap gap-x-2">
+    <dt class="sr-only">Company</dt>
+    <dd class="w-full flex-none text-sm font-medium text-zinc-100">
+      {companyName}
+    </dd>
+    <dt class="sr-only">Role</dt>
+    <dd class="text-xs text-zinc-400">{role}</dd>
+    <dt class="sr-only">Date</dt>
+    <dd
+      class="ml-auto text-xs text-zinc-500"
+      aria-label=`${from} until ${until}`
+    >
+      <time datetime="2022">{from}</time>
+      <span aria-hidden="true">—</span>
+      <time datetime="2024">{until}</time>
+    </dd>
+  </dl>
+</li>

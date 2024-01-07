@@ -1,4 +1,5 @@
 ---
+import WorkItem from "../components/WorkItem.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -125,110 +126,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </svg><span class="ml-3">Work</span>
         </h2>
         <ol class="mt-6 space-y-4">
-          <li class="flex gap-4">
-            <div
-              class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0"
-            >
-              <img
-                alt=""
-                loading="lazy"
-                width="32"
-                height="32"
-                decoding="async"
-                data-nimg="1"
-                class="h-8 w-8 rounded-full"
-                src="/img/deaphealth_logo.png"
-                style="color: transparent;"
-              />
-            </div>
-            <dl class="flex flex-auto flex-wrap gap-x-2">
-              <dt class="sr-only">Company</dt>
-              <dd class="w-full flex-none text-sm font-medium text-zinc-100">
-                DeepHealth
-              </dd>
-              <dt class="sr-only">Role</dt>
-              <dd class="text-xs text-zinc-400">Senior Software Engineer</dd>
-              <dt class="sr-only">Date</dt>
-              <dd
-                class="ml-auto text-xs text-zinc-500"
-                aria-label="2022 until Present"
-              >
-                <time datetime="2022">2022</time>
-                <span aria-hidden="true">—</span>
-                <time datetime="2024">Present</time>
-              </dd>
-            </dl>
-          </li>
-          <li class="flex gap-4">
-            <div
-              class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0"
-            >
-              <img
-                alt=""
-                loading="lazy"
-                width="32"
-                height="32"
-                decoding="async"
-                data-nimg="1"
-                class="h-8 w-8 rounded-full"
-                src="/img/voys_logo.png"
-                style="color: transparent;"
-              />
-            </div>
-            <dl class="flex flex-auto flex-wrap gap-x-2">
-              <dt class="sr-only">Company</dt>
-              <dd class="w-full flex-none text-sm font-medium text-zinc-100">
-                Voys
-              </dd>
-              <dt class="sr-only">Role</dt>
-              <dd class="text-xs text-zinc-400">
-                Software Engineer &amp; Security Officer
-              </dd>
-              <dt class="sr-only">Date</dt>
-              <dd
-                class="ml-auto text-xs text-zinc-500"
-                aria-label="2015 until 2022"
-              >
-                <time datetime="2022">2015</time>
-                <span aria-hidden="true">—</span>
-                <time datetime="2022">2022</time>
-              </dd>
-            </dl>
-          </li>
-          <li class="flex gap-4">
-            <div
-              class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0"
-            >
-              <img
-                alt=""
-                loading="lazy"
-                width="32"
-                height="32"
-                decoding="async"
-                data-nimg="1"
-                class="h-8 w-8 rounded-full"
-                src="/img/mcdonalds_logo.png"
-                style="color: transparent;"
-              />
-            </div>
-            <dl class="flex flex-auto flex-wrap gap-x-2">
-              <dt class="sr-only">Company</dt>
-              <dd class="w-full flex-none text-sm font-medium text-zinc-100">
-                McDonalds
-              </dd>
-              <dt class="sr-only">Role</dt>
-              <dd class="text-xs text-zinc-400">Floor Manager</dd>
-              <dt class="sr-only">Date</dt>
-              <dd
-                class="ml-auto text-xs text-zinc-500"
-                aria-label="2008 until 2015"
-              >
-                <time datetime="2008">2008</time>
-                <span aria-hidden="true">—</span>
-                <time datetime="2015">2015</time>
-              </dd>
-            </dl>
-          </li>
+          <WorkItem
+            imageFileName="deephealth_logo.png"
+            companyName="DeepHealth"
+            role="Senior Software Engineer"
+            from="2022"
+            until="Present"
+          />
+          <WorkItem
+            imageFileName="voys_logo.png"
+            companyName="Voys"
+            role="Software Engineer & Security Officer"
+            from="2015"
+            until="2022"
+          />
+          <WorkItem
+            imageFileName="mcdonalds_logo.png"
+            companyName="McDonalds"
+            role="Floor Manager"
+            from="2008"
+            until="2015"
+          />
         </ol>
         <!-- <a
                 class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-medium bg-zinc-800/50 text-zinc-300 hover:bg-zinc-800 hover:text-zinc-50 active:bg-zinc-800/50 active:text-zinc-50/70 group mt-6 w-full"
