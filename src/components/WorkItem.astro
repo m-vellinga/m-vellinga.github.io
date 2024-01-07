@@ -4,7 +4,7 @@ const { imageFileName, companyName, role, from, until } = Astro.props;
 
 <li class="flex gap-4">
   <div
-    class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0"
+    class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center border-2 border-white bg-zinc-800 shadow-[3px_-3px_0_2px_black]"
   >
     <img
       alt=""
@@ -13,7 +13,7 @@ const { imageFileName, companyName, role, from, until } = Astro.props;
       height="32"
       decoding="async"
       data-nimg="1"
-      class="h-8 w-8 rounded-full"
+      class="h-8 w-8"
       src=`/img/${imageFileName}`
       style="color: transparent;"
     />
