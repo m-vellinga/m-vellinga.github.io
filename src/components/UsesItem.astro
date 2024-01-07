@@ -1,0 +1,12 @@
+---
+const { name } = Astro.props;
+---
+
+<li class="group relative flex flex-col items-start">
+  <h3 class="text-base font-semibold tracking-tight text-zinc-100">
+    {name}
+  </h3>
+  <p class="relative z-10 mt-2 text-sm text-zinc-400">
+    <slot />
+  </p>
+</li>
