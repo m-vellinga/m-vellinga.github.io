@@ -1,5 +1,6 @@
 ---
-
+import NavLink from "./NavLink.astro";
+const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <header
@@ -24,7 +25,7 @@
                       height="512"
                       decoding="async"
                       data-nimg="1"
-                      class="bg-zinc-800 h-16 w-16 ring-2 ring-white shadow-[5px_-5px_0_5px_black]"
+                      class="bg-zinc-700 h-16 w-16 ring-2 ring-white shadow-[5px_-5px_0_5px_black]"
                       style="color:transparent"
                       sizes="4rem"
                       src="/img/avatar_small.png"
@@ -35,20 +36,14 @@
               <div class="flex flex-1 justify-end md:justify-center pt-3">
                 <nav class="pointer-events-auto block">
                   <ul
-                    class="flex px-3 text-sm font-medium ring-2 backdrop-blur bg-zinc-800/90 text-zinc-200 ring-white shadow-[5px_-5px_0_5px_black]"
+                    class="flex px-3 text-sm font-medium ring-2 backdrop-blur bg-zinc-700/90 text-zinc-200 ring-white shadow-[5px_-5px_0_5px_black]"
                   >
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-400"
-                        href="/about/">About</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="relative block px-3 py-2 transition hover:text-teal-400"
-                        href="/uses/">Uses</a
-                      >
-                    </li>
+                    <NavLink path="/about/" active={pathname === "/about/"}>
+                      About
+                    </NavLink>
+                    <NavLink path="/uses/" active={pathname === "/uses/"}>
+                      Uses
+                    </NavLink>
                   </ul>
                 </nav>
               </div>

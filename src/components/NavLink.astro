@@ -1,0 +1,10 @@
+---
+const { active, path } = Astro.props;
+---
+
+<li>
+  <a
+    class=`relative block px-3 py-2 transition ${ active ? "" : "hover:"}text-yellow-400`
+    href=`${path}`><slot /></a
+  >
+</li>
